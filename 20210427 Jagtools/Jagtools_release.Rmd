@@ -134,9 +134,9 @@ rename_flowjo(df) %>%
 
 ```{r load data, include=F}
 # Importing a list of variables that we are interested in
-varofinterest <- read_excel(here("data","kattria data","Lambda_Variable X Y combi.xlsx"))
+varofinterest <- read_excel(here("20210427 Jagtools","data","kattria data","Lambda_Variable X Y combi.xlsx"))
 # Importing a file consisting of patient information, an intracellular staining assay (ICS), and an activation induced marker assay (AIM)
-masterfile <- read_csv("/Volumes/GoogleDrive/Shared drives/Jagannathan Lab/Kattria/Experiments/Lambda study D28 results/R/aimicsclinneut_memCD4.csv")%>%
+masterfile <- read_csv(here("20210427 Jagtools","data","kattria data","aimicsclinneut.csv"))%>%
    subset(is.na(Stim.x)==F)
 
 names(masterfile)[1] <- "id"
